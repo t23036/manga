@@ -1,6 +1,5 @@
 import"./globals.css";
 import Header from "./components/Header";
-import Kensaku from "./components/Kensaku";
 import React from "react";
 import { ReactNode } from "react";
 
