@@ -1,12 +1,11 @@
 'use client'; //このコンポーネントはクライアント側で実行されることをNext.jsに指示
-import {useState} from "react"; //Reactの状態管理フックをインポート
 import {useSearchParams} from "next/navigation"; //URLクエリパラメータを取得するフックをインポート
-import {useEffect} from "react"; //副作用(データ取得など)を処理するフック
+import {useState, useEffect} from "react"; //Reactの状態管理フックをインポート、副作用(データ取得など)を処理するフック
 import React from "react"; //Reactの本体をインポート
-import ResultTable from "../components/ResultTable"; //検索結果を表示するカスタムコンポーネントをインポート
 import axios from "axios"; //HTTPライブラリaxiosをインポート
+import ResultTable from "../components/ResultTable"; //検索結果を表示するカスタムコンポーネントをインポート
 
-export default function Result(){ //Resultページのメインコンポーネント
+export default function ResultClient(){ // 検索結果ページ用のクライアントコンポーネントを定義
     const searchParams = useSearchParams(); //URLのクエリパラメータ(keword)を取得
     const keyword = searchParams.get("keyword"); //クエリの中からkeywordを取り出す
     const [data, setData] = useState([]); //取得した検索結果を保存するstate
