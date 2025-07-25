@@ -1,6 +1,7 @@
 'use client'; //このコンポーネントはクライアント側で実行されることをNext.jsに指示
 import {useState} from "react"; //Reactの状態管理フックをインポート
 import {useSearchParams} from "next/navigation"; //URLクエリパラメータを取得するフックをインポート
+import { Suspense } from 'react';
 import {useEffect} from "react"; //副作用(データ取得など)を処理するフック
 import React from "react"; //Reactの本体をインポート
 import ResultTable from "../components/ResultTable"; //検索結果を表示するカスタムコンポーネントをインポート
