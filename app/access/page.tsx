@@ -1,5 +1,5 @@
 import React, { Suspense } from "react";
-import Result from "../kensaku2/page";
+import Result from "../kensaku2/ResultClient";
 
 export default function AccessPage(){
     return (
