@@ -53,8 +53,6 @@ export default function Main() {
         </div>
       )}
 
-
-
       {/* 検索ボタン */}
       <button
         type="submit"
