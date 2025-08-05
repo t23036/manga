@@ -29,7 +29,7 @@ cursor.execute('''
 ''') #テーブルがなかったら作る、自動採番の主キー、漫画タイトル(必須)、著者名(必須)、作画者名(必須)、発売日、最終更新日、人気度などのテーブルを定義
 
 # CSVからデータ読み込み
-with open('C:/Users/T23036/my-next-app3/app/kensaku2/data.csv', 'r', encoding='utf-8') as file:
+with open('C:/Users/T23036/my-next-app4/app/kensaku2/data.csv', 'r', encoding='utf-8') as file:
     reader = csv.reader(file) #CSVリーダーを作成
     next(reader, None) #ヘッダー行をスキップ
     for row in reader: #各行をループ処理
