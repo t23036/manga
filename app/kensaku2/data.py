@@ -26,7 +26,7 @@ cursor.execute('''
         fupdate DATE,
         popular TEXT
     )
-''') #テーブルを定義、自動採番の主キー、漫画タイトル(必須)、著者名(必須)、作画者名(必須)、発売日、最終更新日、人気度などの
+''') #テーブルがなかったら作る、自動採番の主キー、漫画タイトル(必須)、著者名(必須)、作画者名(必須)、発売日、最終更新日、人気度などのテーブルを定義
 
 # CSVからデータ読み込み
 with open('C:/Users/T23036/my-next-app3/app/kensaku2/data.csv', 'r', encoding='utf-8') as file:
@@ -34,7 +34,7 @@ with open('C:/Users/T23036/my-next-app3/app/kensaku2/data.csv', 'r', encoding='u
     next(reader, None) #ヘッダー行をスキップ
     for row in reader: #各行をループ処理
 
-        release_date = parse_date(row[3]) #春倍日を変換
+        release_date = parse_date(row[3]) #発売日を変換
         fupdate_date = parse_date(row[4]) #更新日を変換
 
         cursor.execute('''
