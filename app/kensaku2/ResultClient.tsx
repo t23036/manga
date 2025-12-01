@@ -18,7 +18,7 @@ export default function ResultClient() { // 検索結果ページ用のクライ
       const fetchData = async () => { // 非同期でデータ取得を行う内部関数を定義
         setLoading(true); // 通信前にローディング状態に切り替える
         try {
-          const response = await axios.post('${API_BASE}/search', {
+          const response = await axios.post(`${API_BASE}/search`, {
             query1: keyword, // サーバー（FastAPIなど）に検索キーワードを送信
           });
           const result = await response.data; // レスポンスのデータ部分を取得
@@ -46,3 +46,4 @@ export default function ResultClient() { // 検索結果ページ用のクライ
     </div>
   );
 }
+
